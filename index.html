@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Kauã Cecilio - Desenvolvedor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div id="home-container">
+            <div id="home-text">
+                <h1 id="home-h1">Olá, eu sou Kauã.</h1>
+                <p id="home-subtitulo">Desenvolvedor Web</p>
+                <p id="home-skills">HTML | CSS | JS</p>
+            </div>
+            <div id="home-photo">
+                <img src="img/kaua.png" alt="Foto de Kauã Cecilio">
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre">
+        <div id="sobre-container">
+            <div id="sobre-text">
+                <h2>Sobre mim</h2>
+                <p>Sou graduado em Sistemas de Informação pela Anhembi Morumbi, atualmente cursando pós em Desenvolvimento Web. Atuo como desenvolvedor front-end e sou apaixonado por tecnologia.</p><br>
+            </div>
+            <div id="cards">
+                <div id="card-projetos"><p class="cards-numero">+ 20</p><p class="cards-text">Projetos</p></div>
+                <div id="card-bootamps"><p class="cards-numero">3</p><p class="cards-text">Bootcamps</p></div>
+                <div id="card-cursos"><p class="cards-numero">10</p><p class="cards-text">Cursos em TI</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos-section">
+        <div class="projetos-container">
+            <h2 class="section-title">Projetos</h2>
+            <div class="carousel-container">
+                <button class="carousel-btn prev-btn" id="prevBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- CARD PROJETO INKLAB -->
+                        <div class="project-card">
+                            <div class="project-image"><img src="img/projeto_biblioteca_tattoo.png" alt="InkLab"></div>
+                            <div class="project-content">
+                                <h3>InkLab</h3>
+                                <p>Catálogo interativo de estilos de tatuagem com busca, cards e visualização ampliada de imagens.</p>
+                                <div class="tech-tags"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span></div>
+                                <a href="https://ceciliokaua.github.io/projeto-inklab/" target="_blank" class="github-link">Ver projeto</a>
+                                <a href="https://github.com/ceciliokaua/projeto-inklab" target="_blank" class="github-link">Ver repositório</a>
+                            </div>
+                        </div>
+                        <!-- FIM CARD PROJETO INKLAB -->
+
+                        <!-- CARD PROJETO JOGO DO NÚMERO SECRETO -->
+                        <div class="project-card">
+                            <div class="project-image"><img src="img/projeto_numero_secreto.png" alt="InkLab"></div>
+                            <div class="project-content">
+                                <h3>Jogo do Número Secreto</h3>
+                                <p>Este é um projeto simples de jogo de adivinhação, onde o jogador deve descobrir qual é o número secreto gerado aleatoriamente pelo sistema.</p>
+                                <div class="tech-tags"><span class="tech-tag">HTML</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
+                                <a href="https://ceciliokaua.github.io/jogo-do-numero-secreto/" target="_blank" class="github-link">Ver projeto</a>
+                                <a href="https://github.com/ceciliokaua/jogo-do-numero-secreto" target="_blank" class="github-link">Ver repositório</a>
+                            </div>
+                        </div>
+                        <!-- FIM CARD PROJETO JOGO DO NÚMERO SECRETO -->
+                    
+                    </div>
+                </div>
+
+                <button class="carousel-btn next-btn" id="nextBtn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+     <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <span>HTML</span>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                        </svg>
+                    </div>
+                    <span>CSS</span>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="12" y1="18" x2="12" y2="22"></line>
+                            <line x1="12" y1="2" x2="12" y2="6"></line>
+                            <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+                            <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+                            <line x1="2" y1="12" x2="6" y2="12"></line>
+                            <line x1="18" y1="12" x2="22" y2="12"></line>
+                            <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+                            <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+                        </svg>
+                    </div>
+                    <span>Git</span>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </div>
+                    <span>GitHub</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ/CONTATO -->
+<footer id="contato" class="contato-footer">
+    <div class="linha-separadora"></div>
+    <div class="contatos-container">
+        <a href="https://www.linkedin.com/in/kauacecilio" target="_blank" class="contato-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/ceciliokaua" target="_blank" class="contato-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+            <span>GitHub</span>
+        </a>
+        <a href="mailto:kauac24@outlook.com" class="contato-item">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <span>Email</span>
+        </a>
+    </div>
+</footer>
+
+
+<!-- MODAL / JS -->
+    <div id="imageModal" class="image-modal">
+        <div class="image-modal-content">
+            <button class="modal-close-btn">&times;</button>
+            <img id="modalImage" src="">
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

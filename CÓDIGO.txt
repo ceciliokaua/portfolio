@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kauã Cecílio - Desenvolvedor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="home-container">
+        <div class="home-text">
+            <h1>Kauã Cecílio</h1>
+                <p>Desenvolvedor Web | HTML, CSS, JS</p>
+        </div>
+
+        <div class="home-photo">
+      <img src="img/kaua.png" alt="Foto de Kauã Cecílio">
+        </div>
+  </div>
+    </section>
+
+
+<section id="projects">
+  <h2>Meus Projetos</h2>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <div class="project-thumb">
+        <img src="img/projeto_biblioteca_tattoo.png" alt="InkLibrary – Guia de Estilos de Tatuagem">
+      </div>
+      <h3>InkLibrary – Guia de Estilos de Tatuagem</h3>
+      <p>Aplicação web que funciona como uma biblioteca de estilos de tatuagem, com busca por palavra‑chave.</p>
+      <div class="tech">
+        <span>HTML</span><br><span>CSS</span><br><span>JavaScript</span>
+      </div>
+
+CONTINUAR DAQUI PRA BAIXO
+
+      <div class="project-links">
+        <a href="https://ceciliokaua.github.io/projeto-imersao-dev/" class="btn">Ver Demo</a>
+        <a href="https://github.com/ceciliokaua/projeto-imersao-dev" class="btn github">GitHub</a>
+      </div>
+    </div>
+
+    <!-- Copie esse bloco .project-card para outros projetos -->
+  </div>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <label>HTML/CSS</label>
+                <div class="bar"><div class="progress" data-width="90%"></div></div>
+            </div>
+            <div class="skill">
+                <label>JavaScript</label>
+                <div class="bar"><div class="progress" data-width="80%"></div></div>
+            </div>
+            <!-- Adicione mais skills -->
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>kauac24@outlook.com | <a href="https://www.linkedin.com/in/kauacecilio">LinkedIn</a> | <a href="https://github.com/ceciliokaua" target="_blank">GitHub</a> | Bauru, SP</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

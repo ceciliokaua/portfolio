@@ -1,0 +1,553 @@
+/* ":root": pseudo-classe do CSS que representa o elemento raiz do documento /
+tudo que declarar no root fica acessível em qualquer lugar do CSS. */
+:root{
+    --color-text: #656565;
+    --color-bg-light: #D5D5D5;
+    --color-bg-dark: #273058da;
+    --color-accent: #C0FF6B;
+    --color-white: #FFFFFF;
+    --font-primary: "Titillium Web", system-ui, -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* * é a configuração padrão, irá abranger todos os elementos da página */
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+
+/* "scroll-behavior: smooth" faz um scrool suave até o link clicado, descendo a página suavemente */
+html{
+    scroll-behavior: smooth;
+}
+
+/* "line-height: 1.6;" Define a altura da linha (espaço entre linhas de texto). 1.6 significa 160% da altura da fonte. */
+/* Color: define a cor padrão do texto em toda a página */
+/* Background: define a cor de fundo da página */
+body{
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-bg-light);
+}
+
+/* ===============================
+Header: Introdução/Menu navegação 
+==================================*/
+
+/* esse trecho faz o header ficar fixo no topo da página, mesmo quando o usuário rolar para baixo */
+header{
+    position: fixed; /*Remove o header do fluxo normal da página e o posiciona em relação à janela do navegador. Ele sempre ficará no mesmo lugar, independente do scroll. */
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 1000; /*Garante que o header fique acima de outros elementos da página. Um valor alto como 1000 é usado para evitar que outros elementos se sobreponham ao header. */
+    padding: 2rem 0; /*Adiciona um espaçamento de 2rem (32px) na parte superior e inferior do header, e 0 na parte esquerda e direita. */
+    background: var(--color-bg-dark);
+    color: var(--color-bg-light)
+}
+
+nav ul{
+    display: flex; /*Exibe os itens da lista em linha, em vez de empilhados verticalmente. */
+    justify-content: center; /*Centraliza os itens da lista horizontalmente dentro do contêiner pai (nav). */
+    list-style: none; /*Remove os marcadores de lista padrão (bolinhas) dos itens da lista. */
+}
+
+nav li{
+    margin: 0 1rem; /*Adiciona um espaçamento de 1rem (16px) à esquerda e à direita de cada item da lista, e 0 na parte superior e inferior. */
+}
+
+nav a{
+    text-decoration: none; /*Remove o sublinhado dos links. */
+    font-weight: bold; /*Deixa o texto dos links em negrito. */
+    color: var(--color-bg-light)
+}
+
+/* a:hover é um pseudo-seletor que estiliza links quando o mouse passa por cima deles.
+a: seleciona todos os links <a>.
+:hover: ativa só quando o cursor do mouse pairar sobre o link.*/
+nav a:hover{
+    color: var(--color-accent); /*Altera a cor do link para a cor de destaque quando o mouse passa sobre ele. */
+}
+
+/* 
+==============
+SEÇÕES GERAIS
+============== */
+
+section{    
+    min-height: 100vh;  /*Define a altura mínima da seção para 100% da altura da janela de visualização (viewport). Isso garante que cada seção ocupe pelo menos toda a altura da tela, mesmo que o conteúdo seja menor. */
+    padding: 5rem 2rem; /*Adiciona um espaçamento de 5rem (80px) na parte superior e inferior da seção, e 2rem (32px) na parte esquerda e direita. */
+    text-align: left; /*Centraliza o texto dentro da seção. */
+}
+
+#home{
+    background: var(--color-bg-light);
+    color: var(--color-bg-dark);
+
+    display: flex;
+    align-items: center; 
+    justify-content: center; /* centraliza horizontalmente */
+
+    min-height: 100vh;
+    padding: 0 2rem; /*Adiciona um espaçamento de 120 pixels na parte superior da seção #home. Isso é útil para compensar a altura do header fixo, garantindo que o conteúdo da seção não fique oculto atrás do header. */
+}
+
+h1{
+    margin-bottom: 1rem; /*Adiciona um espaçamento de 1rem (16px) abaixo do elemento h1. */
+    font-size: 4.5rem; /*Define o tamanho da fonte do elemento h1 para 3rem (48px). */
+    color: var(--color-bg-dark)
+}
+
+h2{
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--color-bg-dark);
+    text-align: center;
+}
+
+/* 
+===================
+HOME - TEXT - FOTO
+=================== */
+
+#home-container{
+    display: flex;
+    align-items: left; /*Alinha os itens filhos da home-container verticalmente ao centro. */
+    justify-content: center; /* Texto esquerda, foto direita */
+    gap: 10rem; /*Adiciona um espaçamento entre os itens filhos da home-container. */
+    max-width: 1200px; /*Define a largura máxima da home-container para 1000 pixels. Isso impede que a container fique muito larga em telas grandes, mantendo um layout mais legível. */
+    margin: 0 auto; /*Centraliza a home-container horizontalmente dentro do seu contêiner pai (a seção #home). O valor "0 auto" define a margem superior e inferior como 0, e a margem esquerda e direita como automática, o que resulta na centralização. */
+    width: 100%;
+}
+
+#home-text{
+    color: var(--color-text)
+}
+
+#home-subtitulo{
+    font-size: 36px;
+}
+
+#home-skills{
+    font-size: 24px;
+}
+
+#home-photo{
+    width: 320px;
+    height: 320px;
+    overflow: hidden; /*Esconde qualquer parte da imagem que ultrapasse os limites do contêiner, garantindo que a foto se encaixe perfeitamente dentro do círculo criado pela borda arredondada. */
+    filter: drop-shadow(-10px 15px 10px rgba(0,0,0,0.3));
+}
+
+#home-photo img{ 
+    width: 220px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%; /*Cria um efeito de círculo ao arredondar as bordas da imagem. */
+}
+
+/* SOBRE */
+#sobre-container{
+
+    align-items: center; /*Alinha os itens filhos da home-container verticalmente ao centro. */
+    max-width: 1200px; /*Define a largura máxima da home-container para 1000 pixels. Isso impede que a container fique muito larga em telas grandes, mantendo um layout mais legível. */
+    margin: 0 auto; /*Centraliza a home-container horizontalmente dentro do seu contêiner pai (a seção #home). O valor "0 auto" define a margem superior e inferior como 0, e a margem esquerda e direita como automática, o que resulta na centralização. */
+    width: 100%;
+}
+#sobre-text{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#cards{
+    display: flex;
+    align-items: left; /*Alinha os itens filhos da home-container verticalmente ao centro. */
+    justify-content: center; /* Texto esquerda, foto direita */
+    gap: 3rem; /*Adiciona um espaçamento de 3rem (48px) entre os itens filhos da home-container. */
+    max-width: 1200px; /*Define a largura máxima da home-container para 1000 pixels. Isso impede que a container fique muito larga em telas grandes, mantendo um layout mais legível. */
+    margin: 0 auto; /*Centraliza a home-container horizontalmente dentro do seu contêiner pai (a seção #home). O valor "0 auto" define a margem superior e inferior como 0, e a margem esquerda e direita como automática, o que resulta na centralização. */
+    width: 100%;
+}
+
+#card-projetos, #card-bootamps, #card-cursos{
+    width: 280px;
+    height: 160px;
+    background: var(--color-white);
+    color: var(--color-bg-dark);
+    border-radius: 15px;
+}
+
+.cards-numero{
+    font-size: 4rem;
+    text-align: center;
+    color: var(--color-bg-dark);
+    overflow: hidden;
+}
+
+.cards-text{
+    font-size: 1.5rem;
+    text-align: center;
+    overflow: hidden;
+    line-height: 0.5;
+    padding: 10px;
+}
+
+/* ===============================
+SEÇÃO PROJETOS
+================================ */
+
+.projetos-section {
+    background: var(--color-bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 5rem 2rem;
+}
+
+.projetos-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+    color: var(--color-bg-dark);
+}
+
+/* Carousel Container */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.carousel-wrapper {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.3s ease-in-out;
+    width: max-content;
+}
+
+/* Buttons de navegação (Setas) */
+.carousel-btn {
+    background: var(--color-accent);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--color-bg-dark);
+    flex-shrink: 0;
+}
+
+.carousel-btn:hover {
+    background: var(--color-bg-dark);
+    color: var(--color-accent);
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn:active {
+    transform: scale(0.95);
+}
+
+.carousel-btn svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 3;
+}
+
+/* Project Card */
+.project-card {
+    background: var(--color-white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0;
+    width: 250px;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Image */
+.project-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+    background: #f0f0f0;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, cursor 0.3s ease;
+    cursor: pointer;
+}
+
+.project-image img:hover {
+    transform: scale(1.05);
+}
+
+.project-image img.expanded {
+    cursor: zoom-out;
+}
+
+/* Project Content */
+.project-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-content h3 {
+    color: var(--color-bg-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-content p {
+    color: var(--color-text);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+/* Tech Tags */
+.tech-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.tech-tag {
+    background: var(--color-accent);
+    color: var(--color-bg-dark);
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* GitHub Link */
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-bg-dark);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.github-link:hover {
+    color: var(--color-accent);
+    gap: 0.8rem;
+}
+
+.github-link svg {
+    transition: transform 0.3s ease;
+}
+
+.github-link:hover svg {
+    transform: rotate(-15deg) scale(1.1);
+}
+
+/* Modal para imagem expandida */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 2rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.image-modal.active {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.image-modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.image-modal-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: var(--color-accent);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--color-bg-dark);
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.modal-close-btn:hover {
+    background: var(--color-bg-dark);
+    color: var(--color-accent);
+    transform: rotate(90deg);
+}
+
+/* SKILLS */
+
+/* ==========================================================================
+   SEÇÃO SKILLS - ESTILIZAÇÃO DOS CARDS
+   ========================================================================== */
+
+.skills-section {
+    background: var(--color-bg-light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Espaçamento entre os cards */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background: var(--color-white);
+    width: 160px; /* Largura fixa para manter o formato quadrado */
+    height: 160px; /* Altura fixa para manter o formato quadrado */
+    border-radius: 15px; /* Bordas arredondadas conforme a imagem */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* Sombra suave para elevação */
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+.skill-card:hover {
+    transform: translateY(-5px); /* Pequena subida no hover */
+}
+
+.skill-icon {
+    color: var(--color-bg-dark);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-card span {
+    color: var(--color-text);
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: none; /* Mantém a capitalização original do HTML */
+}
+
+/* FOOTER */
+
+.contato-footer {
+    padding: 2rem;
+    background-color: white; 
+}
+
+.linha-separadora {
+    height: 1px;
+    background-color: #ddd; 
+    margin-bottom: 2rem;
+}
+
+.contatos-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contato-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--color-bg-dark); 
+    font-weight: 600;
+}
+
+.contato-item:hover {
+    color: var(--color-accent);
+}
