@@ -2,7 +2,7 @@
 
 Este é o repositório do meu portfólio profissional, desenvolvido para apresentar meus projetos, habilidades e experiências na área de Desenvolvimento Web.
 
-[Link para o projeto online](SEU_LINK_AQUI_DEPOIS)
+https://ceciliokaua.github.io/portfolio/
 
 ## 🛠️ Tecnologias Utilizadas
 
