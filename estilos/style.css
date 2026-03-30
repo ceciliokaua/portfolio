@@ -29,6 +29,7 @@ body{
     line-height: 1.6;
     color: var(--color-text);
     background: var(--color-bg-light);
+    padding: 10px;
 }
 
 /* ===============================
@@ -550,4 +551,95 @@ SEÇÃO PROJETOS
 
 .contato-item:hover {
     color: var(--color-accent);
+}
+
+/* ============================================
+   AJUSTES DE RESPONSIVIDADE (FOCO EXCLUSIVO)
+   ============================================ */
+
+@media (max-width: 1024px) {
+    #home-container {
+        gap: 3rem; /* Diminui o espaço entre texto e foto */
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 1. Ajuste da Home (Empilhar foto e texto) */
+    #home-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 2rem;
+        padding-top: 5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #home-photo {
+        width: 250px;
+        height: 250px;
+    }
+
+    #home-photo img {
+        width: 180px;
+    }
+
+    /* 2. Ajuste da Seção Sobre (Cards) */
+    #cards {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    /* 3. Ajuste das Skills (Grid de 2 colunas) */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .skill-card {
+        width: 100%; /* Ocupa o espaço da grid */
+    }
+
+    /* 4. Ajuste do Carrossel de Projetos */
+    .project-card {
+        min-width: 280px; /* Card menor para não vazar da tela do celular */
+    }
+
+    .carousel-container {
+        gap: 0.5rem;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* 5. Ajuste do Footer (Contatos) */
+    .contatos-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
+    }
+}
+
+/* Para celulares muito pequenos */
+@media (max-width: 480px) {
+    nav li {
+        margin: 0 0.5rem;
+    }
+    
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* 1 skill por linha */
+    }
 }

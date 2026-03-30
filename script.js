@@ -22,7 +22,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 /* ============================================
-   FUNCIONALIDADE DO CAROUSEL DE PROJETOS
+   FUNCIONALIDADE DO CARROSSEL DE PROJETOS
    ============================================ */
 
 const carouselTrack = document.getElementById('carouselTrack');
